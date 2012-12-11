@@ -1,4 +1,4 @@
-Test (incremental) compilation.
+Test compilation.
 
   $ [ -n "$PYTHON" ] || PYTHON="`which python`"
   $ LANG="en_US.UTF-8" && unset LC_ALL && unset LANGUAGE
