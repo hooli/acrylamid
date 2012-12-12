@@ -25,7 +25,7 @@ Removal of an article should trigger the next and previous posts.
 
 Generate a bunch of posts to play with (not particular useful though).
 
-  $ for i in {10..30}; do
+  $ for i in $(seq 10 30); do
   >   acrylamid new -q "Spam $i";
   > done
   $ acrylamid compile -q
@@ -54,7 +54,6 @@ files (should be nearly the same as above).
   > date: 2012/12/21
   > tags: [Foo, Bar]
   > ---
-  >
   > EOF
   $ acrylamid compile -Cv
   update  [?.??s] output/articles/index.html (glob)
@@ -90,7 +89,7 @@ files (should be nearly the same as above).
   update  [?.??s] output/atom/index.html (glob)
   update  [?.??s] output/rss/index.html (glob)
   update  [?.??s] output/sitemap.xml (glob)
-  identical  output/style.css
+  skip  output/style.css
   3 new, 8 updated, 23 skipped [?.??s] (glob)
 
 Clean up everything.
